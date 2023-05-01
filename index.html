@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>NeoFi Trading</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" /> -->
+</head>
+<body>
+    <div class="container">
+        <div style="display:flex; justify-content: center; align-items: center; margin-left:2%;">
+            <img class="logo" src="./pics/neofi.webp">
+            <div id="cont1"><object data="./pics/brand_new.svg"></object></div>
+        </div>
+        <div id="cont2">
+            <button>Trade</button>
+            <button>Earn</button>
+            <button>Support</button>
+            <button>About</button>
+        </div>
+        <button id="cont3" class="grad">Connect wallet</button>
+    </div>
+    <select class="select-state" placeholder="Selecet the name..." >
+        <option value="">Select a currency...</option>
+        <option value="eth">Ethereum</option>
+        <option value="btc">Ethereum</option>
+        <option value="12">Ethereum</option>
+        <option value="23">Ethereum</option>
+        <option value="24">Ethereum</option>
+    </select>
+    <div class="container2">
+        <div id="cont2-1">
+            <div id="cont2-11">
+                <img id="icon-up" src="./pics/logo.jfif" alt="avtar">
+            </div>
+            <div id="cont2-2">
+                <p>Current Value<p>
+                <h3 style="color:rgb(76, 76, 163)">&#x20B9 1</h3>
+            </div>
+            <!-- <button id="btcusdt">OnClick</button> -->
+            <div class="form-div">
+                <div class="search-div">
+                    <img id="icon-img" src="./pics/logo.jfif" alt="icon">
+                    <input onkeydown="return /[a-z]/i.test(event.key)" placeholder="Please enter the token name..." id="search-text-inp" type="text">
+                    <p id="arrow-icon" style="color:black;">&#x2630</p>
+                </div>
+                <input type="number" placeholder="Enter the amount to be invested in Rupee &#x20B9" class="search-div2"></input>
+                <input disabled placeholder="0" class="search-div3"></input>
+                <input value="BUY" disabled class="search-div4"></input>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src='main.js'></script>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script> -->
+</body>
+</html>
