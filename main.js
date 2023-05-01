@@ -30,9 +30,7 @@ const coinsObj = {
 }
 //ethusdt@trade/bnbusdt@tradebtcusdt@trade
 function onMessage(){
-    console.log(ws)
     ws.onmessage = (event)=> {
-        console.log(ws)
         console.log("Successful conn establshed. Data fetching begins........")
         let raw_res = event.data;
         data = JSON.parse(raw_res)
@@ -61,12 +59,9 @@ const endCon = ()=>{
     if(ws){
         currentP=0
         lastP=0
-        console.log("Ending the conn. Thank you for using the service")
-        console.log("before ending con -> ",ws)
         ws.close()
         $("h3").text("₹ " + 0)
         $("h3").css("color","blue")
-        console.log("after ending con -> ",ws)
     }else{
         try{
             ws.close();
@@ -88,19 +83,16 @@ const establishCon = (durl)=>{
 }
 
 $("#arrow-icon").click(function(){
-    console.log(ws)
-    console.log("asked the list")
-    console.log(typeof url)
     url=url?url.toLowerCase():""
     if(coinsObj[url]){
         //$("#search-text-inp").prop("disabled", true);
         let durl=coinsObj[url]
-        console.log("checked -> ",durl)
         $("#icon-img").attr("src","./pics/"+durl[1])
         $("#icon-up").attr("src", "./pics/"+durl[1])
         establishCon(durl[0])
     }else{
         alert("Please enter correct name")
+        location.reload(true)
     }
 })
 
